@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+.visual {
+    height: 108rem;
+    background: #d9d9d9;
+}
+
+/* about */
+.about {
+    font-family: "Gugi";
+
+    text-align: center;
+
+    padding: 30rem 0 40rem;
+}
+
+.about dt {
+    font-size: 4.5rem;
+    color: #787878;
+}
+
+.about dd {
+    font-size: 6.4rem;
+    color: var(--main-color);
+}
+/* about */
+
+/* profile */
+.profile {
+    position: relative;
+    padding-bottom: 41.9rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 75rem;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    width: 44.3rem;
+    aspect-ratio: 3/4.5;
+    position: relative;
+    transition: 1s;
+    transform-style: preserve-3d; /* trfs: 3D효과의 전달 1세대까지만 가는 3D효과를 여기까지 전달 */
+    padding-top: 4.5rem;
+
+    transform: rotateZ(5deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 2.4rem;
+    backface-visibility: hidden; /* 뒤집어 졌을때 안보이도록 만드는것 */
+    transform-style: preserve-3d; /* trfs: 3D효과의 전달 1세대까지만 가는 3D효과를 여기까지 전달 */
+}
+
+.card-front {
+    padding: 6rem 8.3rem;
+    background: var(--color2);
+
+    text-align: center;
+    color: var(--color4);
+    font-weight: 700;
+    font-size: 4.4rem;
+}
+
+.card-back {
+    padding: 10rem 9.9rem;
+    background: var(--color2);
+    transform: rotateY(180deg);
+
+    text-align: center;
+    color: var(--color4);
+}
+
+.card-back dt {
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.card-back dd {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.card-back p {
+    padding-top: 25rem;
+}
+
+.my-swiper-button-prev,
+.my-swiper-button-next {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    top: 30%;
+}
+
+.my-swiper-button-prev {
+    left: 15rem;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background: var(--color3) url(../icon-img/next-icon.svg) no-repeat 44%;
+}
+
+.my-swiper-button-next {
+    right: 15rem;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background: var(--color3) url(../icon-img/next-icon.svg) no-repeat 44%;
+    transform: rotate(180deg);
+}
+
+.swiper-pagination {
+    bottom: 27% !important;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.swiper-pagination-bullet {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color3);
+}
+/* profile */
+
+/* quiz */
+.quiz-con {
+    padding-bottom: 37rem;
+}
+
+.q {
+    padding-top: 5rem;
+}
+
+.quiz-container {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    flex-direction: column;
+    background: var(--color2);
+    /* width: 80%; */
+    height: 50%;
+    border-radius: 2rem;
+    padding: 7rem;
+}
+
+#quiz strong {
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--color4);
+}
+
+#quiz label {
+    cursor: pointer;
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--color4);
+    /* flex: 1 1 calc(30%); */
+    padding-bottom: 3rem;
+}
+
+#quiz input {
+    width: 2rem;
+    height: 2rem;
+}
+
+.options {
+    padding: 4rem 0 5rem;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.quiz-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color2);
+    background: var(--color4);
+
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+/* quiz */
+
+/*  gallery-con*/
+.gallery {
+    padding-bottom: 40rem;
+}
+
+.gallery-btn {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 7rem 0 7.2rem;
+}
+
+#year-select,
+#type-select {
+    width: 27.5rem;
+    cursor: pointer;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 10rem;
+    padding: 3rem 0;
+
+    border: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#year-select {
+    background: var(--color2);
+}
+
+#type-select {
+    background: var(--color4);
+}
+
+#year-select option,
+#type-select option {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.photo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.photo figure {
+    height: 35.7rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 2rem);
+}
+
+.photo figure:last-child {
+    height: 35.7rem;
+
+    max-width: 32.0988%;
+}
+
+.photo figure img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 비디오 */
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.video figure {
+    display: flex;
+    height: 35.7rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    flex: 1 1 calc(33.33% - 2rem);
+
+    max-width: 32.0988%;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#modal-video {
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    display: flex !important;
+    position: fixed; /* 화면에 고정 */
+    z-index: 1000; /* 다른 요소 위에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* 부드러운 전환 효과 */
+    opacity: 0; /* 초기 투명도 */
+    visibility: hidden; /* 초기 상태에서 숨김 */
+}
+
+.modal.show {
+    opacity: 1; /* 완전 불투명 */
+    visibility: visible; /* 보이도록 설정 */
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    width: 55%;
+    height: 70%;
+    background-color: var(--color2); /* 모달 내용 배경색 */
+    padding: 3rem; /* 패딩 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.close {
+    position: absolute;
+    display: block;
+    top: 0.5%;
+    right: -6%;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    background: url(../icon-img/close-write-tab.svg) no-repeat 50% / 70%;
+}
+
+.year-content {
+    display: none; /* 기본적으로 숨김 */
+}
