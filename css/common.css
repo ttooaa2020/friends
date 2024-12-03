@@ -70,6 +70,7 @@ img {
 #header {
     width: 100%;
     position: absolute;
+    z-index: 100;
 }
 
 nav {
@@ -84,6 +85,8 @@ nav {
     font-size: 8.4rem;
     font-weight: 400;
     color: var(--main-color);
+
+    font-size: clamp(6rem, 4.375vw, 8.4rem);
 }
 
 .logo a:hover {
@@ -97,10 +100,5 @@ nav {
     color: var(--color3);
     text-align: center;
 
-    font-size: clamp();
-}
-
-#footer {
-    height: 108rem;
-    background: #d9d9d9;
+    font-size: clamp(3rem, 3.6458vw, 7rem);
 }

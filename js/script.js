@@ -284,4 +284,80 @@ $(function () {
         }
     }
     // 갤러리
+
+    // 비주얼
+
+    // 대싱을 변수에 저장
+    const $window = $(window);
+    const $objWrap = $(".visual-img");
+    const $obj1 = $(".obj1");
+    const $obj2 = $(".obj2");
+    const $obj3 = $(".obj3");
+    const $obj4 = $(".obj4");
+
+    const $F1 = $(".f-1");
+    const $F2 = $(".f-2");
+    const $F3 = $(".f-3");
+
+    // 보정된 값
+    let mx = 0;
+
+    // 기본 속도
+    const speed = 0.5; // 움직이는 속도 조정
+
+    // 움직임의 범위 설정
+    const minX = -40; // 최소 X 위치
+    const maxX = 40; // 최대 X 위치
+
+    // 방향 설정
+    let directionX = 1; // X 방향 (1: 오른쪽, -1: 왼쪽)
+
+    // 움직임 구현
+    function moving() {
+        // 위치 업데이트
+        mx += speed * directionX;
+
+        // X좌표 제한
+        if (mx < minX) {
+            mx = minX;
+            directionX = 1; // 방향 전환
+        } else if (mx > maxX) {
+            mx = maxX;
+            directionX = -1; // 방향 전환
+        }
+
+        // 대상에 적용
+        $obj1.css({
+            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+        });
+
+        $obj2.css({
+            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+        });
+
+        $obj3.css({
+            transform: `translate(${-mx}px, 0)`, // Y축은 0으로 설정
+        });
+
+        $obj4.css({
+            transform: `translate(${-mx}px, 0)`, // Y축은 0으로 설정
+        });
+
+        $F1.css({
+            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+        });
+
+        $F2.css({
+            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+        });
+
+        $F3.css({
+            transform: `translate(${-mx}px, 0)`, // Y축은 0으로 설정
+        });
+
+        // 부드럽게 반복
+        requestAnimationFrame(moving);
+    }
+
+    moving();
 });
