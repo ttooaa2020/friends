@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     height: 108rem;
-    background: url(../img-2/v-10.jpg) 50% 52% / 100%;
+    background: url(../img-2/v-10.jpg) no-repeat 50% 52% / 100%;
     overflow: hidden;
 }
 
@@ -19,7 +19,7 @@
     height: 60rem;
     left: -5rem;
     bottom: 4rem;
-    background: url(../img-2/v-1.png) 0% 70% / 180%;
+    background: url(../img-2/v-1.png) no-repeat 0% 70% / 180%;
 }
 
 .obj2 {
@@ -28,7 +28,7 @@
     height: 60rem;
     right: -5rem;
     bottom: 4rem;
-    background: url(../img-2/v-2.png) 100% 70% / 180%;
+    background: url(../img-2/v-2.png) no-repeat 100% 70% / 180%;
 }
 
 .obj3 {
@@ -37,7 +37,7 @@
     height: 65rem;
     left: -5rem;
     bottom: 0rem;
-    background: url(../img-2/v-3.png) 0% 68% / 210%;
+    background: url(../img-2/v-3.png) no-repeat 0% 68% / 210%;
 }
 
 .obj4 {
@@ -46,7 +46,7 @@
     height: 65rem;
     right: -5rem;
     bottom: 0rem;
-    background: url(../img-2/v-4.png) 100% 70% / 202%;
+    background: url(../img-2/v-4.png) no-repeat 100% 70% / 202%;
 }
 /* visual */
 
@@ -135,7 +135,7 @@
     font-weight: 700;
     font-size: 4.4rem;
 
-    padding: 13.544% 18.7359%;
+    /* padding: 13.544% 18.7359%; */
     font-size: clamp(2rem, 2.2916vw, 4.4rem);
 }
 
@@ -147,7 +147,7 @@
     text-align: center;
     color: var(--color4);
 
-    padding: 22.5734% 22.3476%;
+    /* padding: 22.5734% 22.3476%; */
 }
 
 .card-back dt {
@@ -216,10 +216,14 @@
 /* quiz */
 .quiz-con {
     padding-bottom: 37rem;
+
+    padding-bottom: 19.2708%;
 }
 
 .q {
     padding-top: 5rem;
+
+    padding-top: 3.0864%;
 }
 
 .quiz-container {
@@ -232,6 +236,8 @@
     height: 50%;
     border-radius: 2rem;
     padding: 7rem;
+
+    padding: 4.321%;
 }
 
 #quiz strong {
@@ -346,6 +352,10 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+
+    width: 16.9753%;
+    padding: 1.8519% 0;
+    font-size: clamp(1.5rem, 1.5625vw, 3rem);
 }
 
 #year-select {
@@ -468,7 +478,7 @@
     position: relative;
     width: 100%;
     height: 108rem;
-    background: url(../img-2/f-3.jpg) 50% 52% / 100%;
+    background: url(../img-2/f-3.jpg) no-repeat 50% 52% / 100%;
     overflow: hidden;
 }
 
@@ -483,7 +493,7 @@
     height: 100%;
     left: -5rem;
     bottom: 0rem;
-    background: url(../img-2/f-1.png) 0% 50% / 180%;
+    background: url(../img-2/f-1.png) no-repeat 0% 50% / 180%;
 }
 
 .f-2 {
@@ -492,7 +502,7 @@
     height: 100%;
     right: -5.2rem;
     bottom: 0rem;
-    background: url(../img-2/f-2.png) 100% / 180%;
+    background: url(../img-2/f-2.png) no-repeat 100% / 180%;
 }
 
 .f-3 {
@@ -500,5 +510,5 @@
     width: 100%;
     height: 100%;
     bottom: 5%;
-    background: url(../img-2/fier.gif) 50% /100%;
+    background: url(../img-2/fier.gif) no-repeat 50% /100%;
 }
