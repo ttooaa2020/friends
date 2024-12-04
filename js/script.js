@@ -294,13 +294,17 @@ $(function () {
     const $obj2 = $(".obj2");
     const $obj3 = $(".obj3");
     const $obj4 = $(".obj4");
+    const $obj5 = $(".obj5");
+    const $obj6 = $(".obj6");
+    const $obj7 = $(".obj7");
+    const $obj8 = $(".obj8");
 
     const $F1 = $(".f-1");
     const $F2 = $(".f-2");
-    const $F3 = $(".f-3");
 
     // 보정된 값
     let mx = 0;
+    let my = 0; // Y축 이동을 위한 변수 추가
 
     // 기본 속도
     const speed = 0.5; // 움직이는 속도 조정
@@ -308,14 +312,18 @@ $(function () {
     // 움직임의 범위 설정
     const minX = -40; // 최소 X 위치
     const maxX = 40; // 최대 X 위치
+    const minY = -20; // 최소 Y 위치 (필요에 따라 조정)
+    const maxY = 20; // 최대 Y 위치 (필요에 따라 조정)
 
     // 방향 설정
     let directionX = 1; // X 방향 (1: 오른쪽, -1: 왼쪽)
+    let directionY = 1; // Y 방향 (1: 아래쪽, -1: 위쪽)
 
     // 움직임 구현
     function moving() {
         // 위치 업데이트
         mx += speed * directionX;
+        my += speed * directionY; // Y축 위치 업데이트
 
         // X좌표 제한
         if (mx < minX) {
@@ -326,33 +334,56 @@ $(function () {
             directionX = -1; // 방향 전환
         }
 
+        // Y좌표 제한
+        if (my < minY) {
+            my = minY;
+            directionY = 1; // 방향 전환
+        } else if (my > maxY) {
+            my = maxY;
+            directionY = -1; // 방향 전환
+        }
+
         // 대상에 적용
         $obj1.css({
-            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+            transform: `translate3d(${mx}px, 0, 0)`, // X축만 이동
         });
 
         $obj2.css({
-            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+            transform: `translate3d(${mx}px, 0, 0)`, // X축만 이동
         });
 
         $obj3.css({
-            transform: `translate(${-mx}px, 0)`, // Y축은 0으로 설정
+            transform: `translate(${-mx}px, 0)`, // X축만 이동
         });
 
         $obj4.css({
-            transform: `translate(${-mx}px, 0)`, // Y축은 0으로 설정
+            transform: `translate(${-mx}px, 0)`, // X축만 이동
         });
 
+        // $obj5는 Y축으로만 이동
+        $obj5.css({
+            transform: `translate(0, ${my}px)`, // Y축만 이동
+        });
+
+        $obj6.css({
+            transform: `translate(${-mx}px, 0)`, // X축만 이동
+        });
+
+        $obj7.css({
+            transform: `translate(${-mx}px, 0)`, // X축만 이동
+        });
+
+        $obj8.css({
+            transform: `translate(${mx}px, 0)`, // X축만 이동
+        });
+
+        // F1, F2는 X축으로 이동
         $F1.css({
-            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
+            transform: `translate3d(${mx}px, 0, 0)`, // X축만 이동
         });
 
         $F2.css({
-            transform: `translate3d(${mx}px, 0, 0)`, // Y축은 0으로 설정
-        });
-
-        $F3.css({
-            transform: `translate(${-mx}px, 0)`, // Y축은 0으로 설정
+            transform: `translate3d(${mx}px, 0, 0)`, // X축만 이동
         });
 
         // 부드럽게 반복

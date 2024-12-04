@@ -328,6 +328,7 @@
 /*  gallery-con*/
 .gallery {
     padding-bottom: 40rem;
+    padding-bottom: 20.8333%;
 }
 
 .gallery-btn {
@@ -335,6 +336,8 @@
     gap: 3rem;
     justify-content: center;
     padding: 7rem 0 7.2rem;
+
+    padding: 3.6458% 0 3.75%;
 }
 
 #year-select,
@@ -511,4 +514,146 @@
     height: 100%;
     bottom: 5%;
     background: url(../img-2/fier.gif) no-repeat 50% /100%;
+}
+
+/* 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+@media (max-width: 1200px) {
+    .card {
+        width: 30%;
+        padding-top: 5rem;
+    }
+
+    .swiper-pagination {
+        bottom: 30% !important;
+    }
+
+    .f-3 {
+        bottom: 2%;
+        background: url(../img-2/fier.gif) no-repeat center / cover;
+    }
+}
+
+@media (max-width: 820px) {
+    .obj1 {
+        position: absolute;
+        width: 45rem;
+        height: 45rem;
+        left: -5rem;
+        bottom: 8rem;
+        background: url(../img-2/v-1.png) no-repeat 0% 70% / 180%;
+    }
+
+    .obj2 {
+        position: absolute;
+        width: 45rem;
+        height: 45rem;
+        right: -5rem;
+        bottom: 8rem;
+        background: url(../img-2/v-2.png) no-repeat 100% 70% / 180%;
+    }
+
+    .obj3 {
+        position: absolute;
+        width: 50rem;
+        height: 60rem;
+        left: -5rem;
+        bottom: 0rem;
+        background: url(../img-2/v-3.png) no-repeat 0% 68% / 210%;
+    }
+
+    .obj4 {
+        position: absolute;
+        width: 50rem;
+        height: 60rem;
+        right: -5rem;
+        bottom: 0rem;
+        background: url(../img-2/v-4.png) no-repeat 100% 70% / 202%;
+    }
+
+    .obj5 {
+        position: absolute;
+        width: 100%;
+        height: 75%;
+
+        bottom: -4.5rem;
+        background: url(../img-2/v-5.png) no-repeat center / cover;
+    }
+
+    .obj6 {
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        left: -5rem;
+        background: url(../img-2/v-6.png) no-repeat center / cover;
+    }
+
+    .obj7 {
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        background: url(../img-2/v-7.png) no-repeat center / cover;
+    }
+
+    .obj8 {
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        right: -5rem;
+        background: url(../img-2/v-8.png) no-repeat center / cover;
+    }
+    /* visual */
+
+    .card {
+        width: 40%;
+        padding-top: 5rem;
+    }
+
+    .my-swiper-button-next {
+        right: 5%;
+    }
+
+    .my-swiper-button-prev {
+        left: 5%;
+    }
+
+    .f-1 {
+        width: 90%;
+        height: 100%;
+        bottom: -20rem;
+        left: -4rem;
+    }
+
+    .f-2 {
+        width: 90%;
+        height: 100%;
+        bottom: -20rem;
+        right: -4rem;
+    }
+
+    .f-3 {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 660px) {
+    .visual {
+        background: url(../img-2/v-10.jpg) no-repeat center center / cover;
+    }
+
+    .swiper-pagination {
+        bottom: 35% !important;
+    }
+
+    .photo figure,
+    .photo figure:last-child {
+        height: 20rem;
+    }
+
+    .video figure {
+        height: 20rem;
+    }
+
+    #footer {
+        background: url(../img-2/f-3.jpg) no-repeat center center / cover;
+    }
 }
