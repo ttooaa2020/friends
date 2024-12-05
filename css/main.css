@@ -84,7 +84,7 @@
 
 .swiper {
     width: 100%;
-    height: 75rem;
+    height: 64rem;
 }
 
 .swiper-slide {
@@ -135,7 +135,7 @@
     font-weight: 700;
     font-size: 4.4rem;
 
-    /* padding: 13.544% 18.7359%; */
+    padding: 13.544% 18.7359%;
     font-size: clamp(2rem, 2.2916vw, 4.4rem);
 }
 
@@ -145,9 +145,10 @@
     transform: rotateY(180deg);
 
     text-align: center;
+    justify-content: space-between;
     color: var(--color4);
 
-    /* padding: 22.5734% 22.3476%; */
+    padding: 22.5734% 22.3476%;
 }
 
 .card-back dt {
@@ -526,7 +527,6 @@
 @media (max-width: 1200px) {
     .card {
         width: 30%;
-        padding-top: 5rem;
     }
 
     .swiper-pagination {
@@ -544,10 +544,6 @@
 }
 
 @media (max-width: 1000px) {
-    .card {
-        padding-top: 10rem;
-    }
-
     .my-swiper-button-next {
         right: 5%;
     }
@@ -629,7 +625,6 @@
 
     .card {
         width: 40%;
-        padding-top: 5rem;
     }
 
     .f-1 {
@@ -656,10 +651,6 @@
         background: url(../img-2/v-10.jpg) no-repeat center center / cover;
     }
 
-    .card {
-        padding-top: 8rem;
-    }
-
     .my-swiper-button-prev,
     .my-swiper-button-next {
         top: 35%;
@@ -681,6 +672,12 @@
         gap: 1rem;
     }
 
+    #year-select,
+    #type-select {
+        width: 30%;
+        padding: 1.5rem;
+    }
+
     .photo figure,
     .photo figure:last-child {
         height: 20rem;
@@ -695,8 +692,113 @@
     }
 }
 
-@media (max-width: 660px) {
-    .card {
-        padding-top: 15rem;
+@media (max-width: 600px) {
+    .swiper {
+        height: 50rem;
     }
 }
+
+@media (max-width: 510px) {
+    .about {
+        padding: 17rem 0 17rem;
+    }
+    .swiper {
+        height: 47rem;
+    }
+
+    .card-back dt {
+        font-size: 2.5rem;
+    }
+
+    .card-back dd {
+        font-size: 1.5rem;
+    }
+
+    .card-back p {
+        font-size: 1.2rem;
+    }
+
+    .swiper-pagination {
+        gap: 0.5rem;
+        bottom: 33% !important;
+    }
+
+    .swiper-pagination-bullet {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .my-swiper-button-prev,
+    .my-swiper-button-next {
+        top: 29%;
+    }
+
+    .my-swiper-button-prev {
+        width: 5rem;
+        height: 5rem;
+        background: var(--color3) url(../icon-img/next-icon.svg) no-repeat 42% / 30%;
+    }
+
+    .my-swiper-button-next {
+        width: 5rem;
+        height: 5rem;
+        background: var(--color3) url(../icon-img/next-icon.svg) no-repeat 42% / 30%;
+    }
+
+    .q {
+        padding-top: 5rem;
+    }
+
+    .quiz-container {
+        padding: 3rem;
+    }
+
+    #quiz {
+    }
+
+    #quiz strong {
+        font-size: 2rem;
+    }
+
+    #quiz label {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .score {
+        font-size: 2.5rem;
+    }
+
+    .message {
+        font-size: 1.5rem;
+    }
+
+    #reset-btn {
+        padding: 1.5rem 2rem 1.5rem 2rem;
+    }
+
+    .gallery-btn {
+        padding: 3rem 0 2.5rem;
+    }
+
+    #year-select,
+    #type-select {
+        width: 35%;
+    }
+
+    .photo,
+    .video {
+        gap: 1.5rem;
+    }
+
+    .photo figure,
+    .photo figure:last-child,
+    .video figure {
+        height: 15rem;
+        border-radius: 1.5rem;
+    }
+}
+
+/* 420 */
