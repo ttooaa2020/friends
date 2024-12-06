@@ -4,101 +4,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
 
 :root {
-    --Light-100: #fff;
+  --Light-100: #fff;
 
-    --main-color: #199c5a;
-    --color2: #2a5249;
-    --color3: #795840;
-    --color4: #aeab92;
-    --color5: #e5dbb5;
+  --main-color: #199c5a;
+  --color2: #2a5249;
+  --color3: #795840;
+  --color4: #aeab92;
+  --color5: #e5dbb5;
 }
 
 ::selection {
-    background: var(--main-color);
-    color: var(--Light-100);
+  background: var(--main-color);
+  color: var(--Light-100);
 }
 
 html {
-    font-size: 100%;
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-    font: 2rem/1.5 Pretendard, Gugi, sans-serif;
-    color: var(--Darck-100);
-    text-transform: capitalize;
-    word-break: keep-all;
-    overflow-x: hidden;
+  font: 2rem/1.5 Pretendard, Gugi, sans-serif;
+  color: var(--Darck-100);
+  text-transform: capitalize;
+  word-break: keep-all;
+  overflow-x: hidden;
 
-    min-width: 36rem;
-    background: var(--Light-100);
+  min-width: 36rem;
+  background: var(--Light-100);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-    text-decoration: none;
-    color: var(--main-color);
+  text-decoration: none;
+  color: var(--main-color);
 }
 
 img {
-    vertical-align: top;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
+  vertical-align: top;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hidden {
-    position: absolute;
-    margin: -1px;
-    width: -1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+  position: absolute;
+  margin: -1px;
+  width: -1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }
 
 .inner {
-    width: 162rem;
-    width: 84.375%;
-    margin: 0 auto;
+  width: 162rem;
+  width: 84.375%;
+  margin: 0 auto;
 }
 
 #header {
-    width: 100%;
-    position: absolute;
-    z-index: 100;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 21.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 21.5rem;
 }
 
 .logo a {
-    font-family: "Gugi";
-    font-size: 8.4rem;
-    font-weight: 400;
-    color: var(--main-color);
+  font-family: "Gugi";
+  font-size: 8.4rem;
+  font-weight: 400;
+  color: var(--main-color);
 
-    font-size: clamp(6rem, 4.375vw, 8.4rem);
+  font-size: clamp(6rem, 4.375vw, 8.4rem);
 }
 
 .logo a:hover {
-    color: var(--color2);
+  color: var(--color2);
 }
 
 .title {
-    font-family: "Gugi";
-    font-size: 7rem;
-    font-weight: 400;
-    color: var(--color3);
-    text-align: center;
+  font-family: "Gugi";
+  font-size: 7rem;
+  font-weight: 400;
+  color: var(--color3);
+  text-align: center;
 
-    font-size: clamp(3rem, 3.6458vw, 7rem);
+  font-size: clamp(3rem, 3.6458vw, 7rem);
+}
+
+.top {
+  display: block;
+  position: fixed;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  background: var(--main-color) url(../icon-img/next-icon.svg) no-repeat 45%;
+  transform: rotate(90deg);
+  bottom: 10%;
+  right: 5%;
+  z-index: 100;
 }
